@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday ❤️</title>
+<title>Happy Birthday My Love ❤️</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="overlay" onclick="startMusic()">
@@ -15,6 +16,7 @@
 
 <div class="container">
 <h1>Happy Birthday My Love ❤️🎂</h1>
+
 <div class="typing-box">
 <p id="typedText"></p>
 </div>
@@ -30,6 +32,19 @@ const message = `Happy Birthday majha lekru ❤️🎂
 
 Tuzya aalyapasun mazi life kharach change zali aahe 💕
 Tu fakt mazi girlfriend nahi, tu mazi happiness, maza peace ani mazi strength ahes 🥺💖
+
+Tuzya smile ne maza full day bright hoto ☀️😍
+Ani tu radata na, te mala ajibat nahi avadt 😤❤️
+Mi nehmi tuzyasobat asnar — good days madhe pan ani bad days madhe pan 🤝💞
+
+Devakade ekach prayer aahe 🙏
+Tu nehmich happy raha, successful raha ani mazyasobat raha 💍✨
+
+Tu majhi lucky charm ahes 🍀💖
+Ani future madhe pan mala fakt tuzya sobat life spend karaychi aahe 😘🌹
+
+Enjoy your special day baby 🎉🎁
+Aaj full queen mode madhe raha 👑🔥
 
 Love you forever majhi beautiful Baala 😘❤️✨`;
 
@@ -48,7 +63,9 @@ document.getElementById("music").play();
 document.querySelector(".overlay").style.display = "none";
 }
 
+// Falling Hearts
 const heartsContainer = document.querySelector(".hearts");
+
 function createHeart() {
 const heart = document.createElement("div");
 heart.classList.add("heart");
@@ -57,8 +74,12 @@ heart.style.left = Math.random() * 100 + "vw";
 heart.style.fontSize = Math.random() * 20 + 15 + "px";
 heart.style.animationDuration = Math.random() * 3 + 4 + "s";
 heartsContainer.appendChild(heart);
-setTimeout(() => heart.remove(), 7000);
+
+setTimeout(() => {
+heart.remove();
+}, 7000);
 }
+
 setInterval(createHeart, 300);
 
 </script>

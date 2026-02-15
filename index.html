@@ -5,43 +5,28 @@
     <title>Happy Birthday My Love ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="startMusicOnce()">
+<body>
 
-<!-- Tap Screen Overlay -->
-<div class="overlay" id="tapMessage">
+<div class="overlay" id="tapMessage" onclick="startMusic()">
     💖 Tap Anywhere My Love 💖
 </div>
 
-<!-- Falling Hearts -->
 <div class="hearts"></div>
 
 <div class="container">
     <h1>Happy Birthday My Love ❤️🎂</h1>
-
     <div class="typing-box">
         <p id="typedText"></p>
     </div>
 </div>
 
-<!-- IMPORTANT: path updated -->
-<audio id="music" autoplay loop>
+<audio id="music" loop>
     <source src="og/song.mp3" type="audio/mp3">
 </audio>
 
 <script>
 
-let started = false;
-
-function startMusicOnce() {
-    if (!started) {
-        const music = document.getElementById("music");
-        music.play();
-        document.getElementById("tapMessage").style.display = "none";
-        started = true;
-    }
-}
-
-// Typing Effect
+// AUTO typing immediately
 const message = `Happy Birthday majha lekru ❤️🎂
 
 Tuzya aalyapasun mazi life kharach change zali aahe 💕
@@ -70,8 +55,13 @@ function typeWriter() {
         setTimeout(typeWriter, 35);
     }
 }
-window.onload = typeWriter;
+typeWriter();
 
+// MUSIC START
+function startMusic() {
+    document.getElementById("music").play();
+    document.getElementById("tapMessage").style.display = "none";
+}
 
 // Falling Hearts
 const heartsContainer = document.querySelector(".hearts");
